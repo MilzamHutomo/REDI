@@ -35,6 +35,7 @@ class VacancyListViewAdapter( private val listVacancy: ArrayList< Vacancy > ) : 
 
         holder.btnDetail.setOnClickListener {
             val moveToDetail = Intent( holder.itemView.context, VacancyDetail::class.java )
+            moveToDetail.putExtra("vacancy_title", vacancy.name )
             holder.itemView.context.startActivity( moveToDetail )
         }
     }
