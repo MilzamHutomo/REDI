@@ -33,9 +33,12 @@ object VacancyData {
         val list = arrayListOf< Vacancy >()
         for ( index in vcnName.indices ){
             val data = Vacancy()
-            data.name = vcnName[ index ]
-            data.location = vcnLocation[ index ]
-            data.duration = vcnDuration[ index ]
+//            data.name = vcnName[ index ]
+//            data.location = vcnLocation[ index ]
+//            data.duration = vcnDuration[ index ]
+//            data.setName( vcnName[ index ] )
+//            data.setLocation( vcnLocation[ index ] )
+//            data.setDuration(vcnDuration[ index ] )
             list.add( data )
         }
         return list
