@@ -6,8 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class VacancyListViewAdapter( private val listVacancy: ArrayList< Vacancy > ) : RecyclerView.Adapter<VacancyListViewAdapter.ListViewHolder>(), View.OnClickListener {
 
@@ -16,6 +18,7 @@ class VacancyListViewAdapter( private val listVacancy: ArrayList< Vacancy > ) : 
         var viewLoc: TextView = itemView.findViewById( R.id.vacancy_loc_holder )
         var viewDur: TextView = itemView.findViewById( R.id.vacancy_period_holder )
         var btnDetail: Button = itemView.findViewById( R.id.vacancy_detail_btn)
+        var viewImage: ImageView = itemView.findViewById( R.id.event_photo )
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
@@ -35,6 +38,10 @@ class VacancyListViewAdapter( private val listVacancy: ArrayList< Vacancy > ) : 
         holder.viewName.text = vacancy.name
         holder.viewLoc.text = vacancy.location
         holder.viewDur.text = vacancy.duration
+
+        Glide.with( holder.itemView.context )
+            .load( R.drawable.icon_redi )
+            .into( holder.viewImage )
 
         holder.btnDetail.setOnClickListener {
             val moveToDetail = Intent( holder.itemView.context, VacancyDetail::class.java )
