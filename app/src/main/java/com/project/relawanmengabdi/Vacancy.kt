@@ -1,9 +1,9 @@
 package com.project.relawanmengabdi
 
 data class Vacancy (
-    val name: String = "",
-    val location: String = "",
-    val duration: String = ""
+    var name: String = "",
+    var location: String = "",
+    var duration: String = ""
 )
 //class Vacancy {
 //    private lateinit var name: String

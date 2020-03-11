@@ -1,6 +1,7 @@
 package com.project.relawanmengabdi
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,6 +29,8 @@ class VacancyListViewAdapter( private val listVacancy: ArrayList< Vacancy > ) : 
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val vacancy = listVacancy[ position ]
+
+//        Log.d("List Size", listVacancy.size.toString())
 
         holder.viewName.text = vacancy.name
         holder.viewLoc.text = vacancy.location
