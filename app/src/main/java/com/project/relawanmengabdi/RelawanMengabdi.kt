@@ -11,5 +11,6 @@ class RelawanMengabdi : Application() {
         if( FirebaseApp.getApps( this ).isEmpty() ){
             FirebaseDatabase.getInstance().setPersistenceEnabled( true )
         }
+        
     }
 }
